@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Resume of Alex Morgan - BBA Final-Year Candidate. Experience, education, skills, and PDF resume download.">
+  <title>Resume &amp; Professional Profile | Alex Morgan - BBA Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Print Stylesheet -->
+  <style>
+    @media print {
+      header, footer, .no-print {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+      }
+      .print-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .print-section {
+        page-break-inside: avoid;
+      }
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-sky-900 min-h-screen flex flex-col">
+
+  <!-- ==========================================
+       HEADER & NAVIGATION (Hidden on Print)
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Brand / Wordmark -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="w-10 h-10 rounded-lg bg-slate-900 text-white font-bold flex items-center justify-center text-lg shadow-sm group-hover:bg-sky-700 transition-colors">
+            AM
+          </span>
+          <div>
+            <span class="block font-bold text-slate-900 text-lg leading-tight group-hover:text-sky-700 transition-colors">Alex Morgan</span>
+            <span class="block text-xs text-slate-500 font-medium">BBA Candidate 2025</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Home</a>
+          <a href="about.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">About</a>
+          <a href="projects.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Projects</a>
+          <a href="resume.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Resume</a>
+          <a href="contact.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Contact</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-all shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="about.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
+      <a href="projects.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Projects</a>
+      <a href="resume.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Resume</a>
+      <a href="contact.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Contact</a>
+      <div class="pt-2">
+        <a href="assets/resume.pdf" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-colors">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- Top Resume Control Bar (No Print) -->
+    <section class="py-8 bg-white border-b border-slate-200/60 no-print">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-slate-900">Curriculum Vitae / Resume</h1>
+          <p class="text-xs text-slate-500 mt-0.5">Web version &bull; Print-optimized layout available</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="window.print()" class="inline-flex items-center px-4 py-2 rounded-lg bg-slate-100 text-slate-800 text-sm font-semibold hover:bg-slate-200 transition-colors">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            Print Resume
+          </button>
+          <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center px-4 py-2 rounded-lg bg-slate-900 text-white text-sm font-semibold hover:bg-sky-700 transition-colors shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Printable Resume Document Paper Container -->
+    <section class="py-12 bg-slate-100 sm:px-4">
+      <div class="print-container max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-xl border border-slate-200/80 shadow-md">
+
+        <!-- RESUME HEADER -->
+        <div class="border-b-2 border-slate-900 pb-6 mb-6">
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">ALEX MORGAN</h1>
+          <p class="text-base font-semibold text-sky-800 mt-1">BBA Final-Year Student | Aspiring Business Analyst</p>
+
+          <div class="mt-4 flex flex-wrap gap-y-1 gap-x-4 text-xs sm:text-sm text-slate-600">
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4 text-slate-400 no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 012 2V7a2 2 0 01-2-2H5a2 2 0 01-2 2v10a2 2 0 012 2z"/></svg>
+              alex.morgan.bba@example.com
+            </span>
+            <span>&bull;</span>
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4 text-slate-400 no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              (555) 019-2834
+            </span>
+            <span>&bull;</span>
+            <span>linkedin.com/in/example-alex-morgan</span>
+            <span>&bull;</span>
+            <span>Metropolitan Area, US</span>
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="print-section mb-6">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-2">
+            Professional Summary
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Analytical and detail-oriented Senior Bachelor of Business Administration (BBA) candidate with a concentration in Business Analytics &amp; Strategic Management. Proficient in quantitative data modeling (Excel, SPSS, Tableau, SQL), financial valuation (DCF, WACC), and process mapping (BPMN). Proven ability to translate complex operational data into actionable strategic recommendations through internships and national case competition victories. Seeking an entry-level Business Analyst or Junior Consultant role upon graduation in May 2025.
+          </p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="print-section mb-6">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-3">
+            Education
+          </h2>
+          <div>
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-bold text-slate-900 text-sm sm:text-base">Bachelor of Business Administration (BBA)</h3>
+              <span class="text-xs font-semibold text-slate-600">Expected May 2025</span>
+            </div>
+            <div class="flex justify-between items-baseline text-xs text-slate-600">
+              <p class="font-medium text-sky-800">State University School of Business</p>
+              <span>Major GPA: 3.85 / 4.00</span>
+            </div>
+            <ul class="list-disc pl-5 text-xs text-slate-700 mt-2 space-y-1">
+              <li><strong>Specialization:</strong> Business Analytics &amp; Strategic Management | Cumulative GPA: 3.82</li>
+              <li><strong>Honors:</strong> Dean’s Honor List (4 Semesters), Beta Gamma Sigma Honor Society Nominee</li>
+              <li><strong>Key Coursework:</strong> Business Analytics &amp; Mining, Corporate Finance &amp; Valuation, Strategic Management, Operations Research, Marketing Analytics, Econometrics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="print-section mb-6">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-3">
+            Experience &amp; Internships
+          </h2>
+          <div class="space-y-4">
+
+            <div>
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-slate-900 text-sm">Business Analyst Intern</h3>
+                <span class="text-xs text-slate-600 font-mono">June 2024 – August 2024</span>
+              </div>
+              <p class="text-xs font-medium text-slate-700">Apex Regional Logistics &bull; Metropolitan Area</p>
+              <ul class="list-disc pl-5 text-xs text-slate-700 mt-1.5 space-y-1">
+                <li>Analyzed 12 months of warehouse fulfillment datasets in Excel and Tableau to identify bottlenecks, reducing order processing delays by 14%.</li>
+                <li>Created automated weekly inventory reporting templates in MS Excel using PivotTables and VBA, saving 5 hours of manual reporting time weekly.</li>
+                <li>Collaborated with cross-functional supply chain leads to present process optimization proposals to senior executive directors.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-bold text-slate-900 text-sm">Student Research Assistant</h3>
+                <span class="text-xs text-slate-600 font-mono">September 2023 – Present</span>
+              </div>
+              <p class="text-xs font-medium text-slate-700">Department of Management &amp; Analytics, State University</p>
+              <ul class="list-disc pl-5 text-xs text-slate-700 mt-1.5 space-y-1">
+                <li>Managed survey dataset cleansing and statistical coding in SPSS for faculty research on consumer retail purchasing trends.</li>
+                <li>Authored literature review summaries across 20+ peer-reviewed business journals.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SELECTED PROJECTS -->
+        <div class="print-section mb-6">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-200 pb-1 mb-3">
+            Applied Business Capstone Projects
+          </h2>
+          <div class="space-y-3 text-xs text-slate-700">
+            <div>
+              <div class="flex justify-between font-bold text-slate-900">
+                <span>Retail Market Feasibility &amp; Consumer Insights Study</span>
+                <span class="text-slate-500 font-normal">SPSS &bull; Tableau &bull; Survey Design</span>
+              </div>
+              <p class="mt-0.5">Engineered a 1,250-respondent market survey to evaluate pricing elasticity for store expansion. Formulated entry pricing strategy yielding a projected 18% revenue lift.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-slate-900">
+                <span>Corporate DCF Valuation &amp; M&amp;A Sensitivity Analysis</span>
+                <span class="text-slate-500 font-normal">Financial Valuation &bull; Excel Model</span>
+              </div>
+              <p class="mt-0.5">Modeled 5-year FCF projections and WACC (8.75%) for a target retailer. Identified fair value of $42.8M ($14.20/share) to support buy-side acquisition negotiations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS & CERTIFICATIONS -->
+        <div class="print-section grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2 border-t border-slate-200">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-2">
+              Skills &amp; Competencies
+            </h2>
+            <ul class="text-xs text-slate-700 space-y-1">
+              <li><strong>Business Analysis:</strong> Financial Modeling (DCF), BPMN Flowcharts, Market Research, ROI Analysis</li>
+              <li><strong>Software Tools:</strong> Advanced Excel (PivotTables, VBA), Tableau, Power BI, SPSS, SQL, MS PowerPoint</li>
+              <li><strong>Soft Skills:</strong> Executive Presentation, Stakeholder Management, Team Leadership</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 mb-2">
+              Certifications &amp; Awards
+            </h2>
+            <ul class="text-xs text-slate-700 space-y-1">
+              <li><strong>Google Data Analytics Certificate</strong> (Coursera - 2024)</li>
+              <li><strong>Bloomberg Market Concepts (BMC)</strong> (2023)</li>
+              <li><strong>1st Place Winner:</strong> Inter-University Business Case Competition (2024)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SHARED FOOTER (Hidden on Print)
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-sky-600 text-white font-bold flex items-center justify-center text-sm">AM</span>
+            <span class="font-bold text-white text-lg">Alex Morgan</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            BBA Candidate specializing in Business Analytics &amp; Strategic Management. Passionate about turning complex data into actionable business insight.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Quick Links</h4>
+          <ul class="space-y-1.5 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Me</a></li>
+            <li><a href="projects.html" class="hover:text-white transition-colors">Projects &amp; Case Studies</a></li>
+            <li><a href="resume.html" class="hover:text-white transition-colors">Resume</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Connect</h4>
+          <p class="text-sm">
+            Email: <a href="mailto:alex.morgan.bba@example.com" class="text-sky-400 hover:underline">alex.morgan.bba@example.com</a>
+          </p>
+          <p class="text-sm">
+            LinkedIn: <a href="https://linkedin.com/in/example-alex-morgan" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">linkedin.com/in/example-alex-morgan</a>
+          </p>
+          <p class="text-sm">
+            Location: Metropolitan Area, United States
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="year">2025</span> Alex Morgan. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Customizable BBA Student Portfolio Website</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

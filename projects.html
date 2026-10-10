@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects and Case Studies by Alex Morgan - BBA Student. Filterable business analysis, marketing research, and financial modeling projects.">
+  <title>Projects &amp; Case Studies | Alex Morgan - BBA Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-sky-900 min-h-screen flex flex-col">
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Brand / Wordmark -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="w-10 h-10 rounded-lg bg-slate-900 text-white font-bold flex items-center justify-center text-lg shadow-sm group-hover:bg-sky-700 transition-colors">
+            AM
+          </span>
+          <div>
+            <span class="block font-bold text-slate-900 text-lg leading-tight group-hover:text-sky-700 transition-colors">Alex Morgan</span>
+            <span class="block text-xs text-slate-500 font-medium">BBA Candidate 2025</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Home</a>
+          <a href="about.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">About</a>
+          <a href="projects.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Projects</a>
+          <a href="resume.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Resume</a>
+          <a href="contact.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Contact</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-all shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="about.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
+      <a href="projects.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Projects</a>
+      <a href="resume.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Resume</a>
+      <a href="contact.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Contact</a>
+      <div class="pt-2">
+        <a href="assets/resume.pdf" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-colors">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ==========================================
+         PAGE HEADER
+         ========================================== -->
+    <section class="py-12 md:py-16 bg-white border-b border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-700">Applied Business Knowledge</span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1 mb-4">Projects &amp; Case Studies</h1>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            A showcase of coursework capstones, research deliverables, and simulated business consulting projects. Each case study details the core problem, analytical methods, tools used, and final strategic recommendations.
+          </p>
+          <div class="mt-4 p-3 bg-slate-100 rounded-lg text-xs text-slate-600 border border-slate-200">
+            <strong>Note for Recruiters:</strong> These projects represent real academic capstone models and simulated consulting frameworks. The sample projects below serve as editable structures demonstrating my research and problem-solving methodology.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROJECT FILTERS & GRID SECTION
+         ========================================== -->
+    <section class="py-12 md:py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 mb-10" role="tablist" aria-label="Filter projects by category">
+          <button data-filter="all" aria-pressed="true" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-white transition-all shadow-sm">
+            All Projects
+          </button>
+          <button data-filter="marketing" aria-pressed="false" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Marketing &amp; Consumer Research
+          </button>
+          <button data-filter="finance" aria-pressed="false" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Finance &amp; Valuation
+          </button>
+          <button data-filter="business-analysis" aria-pressed="false" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Business Analysis &amp; Operations
+          </button>
+          <button data-filter="strategy" aria-pressed="false" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Entrepreneurship &amp; Strategy
+          </button>
+          <button data-filter="academic" aria-pressed="false" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
+            Academic Case Studies
+          </button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project 1 (Marketing) -->
+          <article data-category="marketing" class="project-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-market-research.svg" alt="Market Feasibility Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Marketing &amp; Research
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-slate-400 block mb-1">[Demonstration Case Study]</span>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  Retail Market Feasibility &amp; Consumer Insights Study
+                </h3>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Conducted a comprehensive survey study across 1,250 target consumers to analyze price elasticity and demographic readiness for expanding a sustainable retail brand.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">SPSS</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Tableau</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Survey Sampling</span>
+                </div>
+                <button data-modal-target="modal-project-1" class="w-full py-2.5 px-3 text-xs font-semibold text-slate-900 bg-slate-100 hover:bg-sky-700 hover:text-white rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 (Finance) -->
+          <article data-category="finance" class="project-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-financial-analysis.svg" alt="Financial Valuation Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Finance &amp; Valuation
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-slate-400 block mb-1">[Demonstration Case Study]</span>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  Corporate DCF Valuation &amp; M&amp;A Sensitivity Analysis
+                </h3>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Constructed a dynamic 5-year Discounted Cash Flow valuation model, calculated enterprise WACC, and evaluated valuation multiples for a acquisition target.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Financial Modeling</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">DCF Model</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">WACC</span>
+                </div>
+                <button data-modal-target="modal-project-2" class="w-full py-2.5 px-3 text-xs font-semibold text-slate-900 bg-slate-100 hover:bg-sky-700 hover:text-white rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 (Business Analysis) -->
+          <article data-category="business-analysis" class="project-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-digital-strategy.svg" alt="Digital Transformation Strategy Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Business Analysis
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-slate-400 block mb-1">[Demonstration Case Study]</span>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  SME Supply Chain Automation &amp; Process Re-engineering
+                </h3>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Mapped current vs. future-state BPMN workflows to eliminate warehouse stockout delays and evaluated cloud ERP software platforms with vendor scorecards.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">BPMN Workflow</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">ROI Modeling</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">ERP Vendor Scorecard</span>
+                </div>
+                <button data-modal-target="modal-project-3" class="w-full py-2.5 px-3 text-xs font-semibold text-slate-900 bg-slate-100 hover:bg-sky-700 hover:text-white rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 (Strategy & Entrepreneurship) -->
+          <article data-category="strategy" class="project-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-digital-strategy.svg" alt="Go-To-Market Strategy Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Strategy
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-slate-400 block mb-1">[Demonstration Case Study]</span>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  Go-To-Market &amp; Commercialization Plan for SaaS Startup
+                </h3>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Formulated pricing tiers, customer acquisition cost (CAC) projections, and channel strategy for an AI-powered B2B invoicing platform during capstone pitch competition.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">GTM Strategy</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">CAC &amp; LTV Projection</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Competitive Pitch</span>
+                </div>
+                <button data-modal-target="modal-project-4" class="w-full py-2.5 px-3 text-xs font-semibold text-slate-900 bg-slate-100 hover:bg-sky-700 hover:text-white rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 (Academic Case Study) -->
+          <article data-category="academic" class="project-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-market-research.svg" alt="Macroeconomic Analysis Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Academic Case Study
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-slate-400 block mb-1">[Demonstration Case Study]</span>
+                <h3 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  Macroeconomic Interest Rate Impact Analysis
+                </h3>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Evaluated the downstream impact of central bank interest rate hikes on commercial real estate borrowing costs and portfolio capital allocation strategies.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Macroeconomics</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Econometrics</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Regression Analysis</span>
+                </div>
+                <button data-modal-target="modal-project-5" class="w-full py-2.5 px-3 text-xs font-semibold text-slate-900 bg-slate-100 hover:bg-sky-700 hover:text-white rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty Filter State Container -->
+        <div id="no-projects-message" class="hidden text-center py-16 bg-white rounded-xl border border-slate-200 mt-8">
+          <svg class="w-12 h-12 text-slate-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <h4 class="text-lg font-bold text-slate-900">No projects found in this category</h4>
+          <p class="text-sm text-slate-500 mt-1 max-w-sm mx-auto">Try selecting "All Projects" or choosing a different filter above.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       CASE STUDY DETAIL MODALS
+       ========================================== -->
+
+  <!-- Modal Project 1 -->
+  <div id="modal-project-1" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-p1-title">
+    <div class="bg-white rounded-xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-4">
+        <span class="text-xs font-mono text-slate-400">[Demonstration Case Study - Editable Template]</span>
+        <h2 id="modal-p1-title" class="text-2xl font-bold text-slate-900 mt-1">
+          Retail Market Feasibility &amp; Consumer Insights Study
+        </h2>
+        <span class="inline-block mt-2 px-2.5 py-0.5 bg-sky-100 text-sky-800 text-xs font-semibold rounded">Marketing &amp; Research</span>
+      </div>
+
+      <div class="h-48 bg-slate-100 rounded-lg overflow-hidden mb-6 border border-slate-200">
+        <img src="assets/images/project-market-research.svg" alt="Project 1 Chart Preview" class="w-full h-full object-cover">
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">1. Business Problem &amp; Objective</h3>
+          <p>An eco-friendly consumer goods startup sought to determine whether to expand brick-and-mortar retail locations into three adjacent metropolitan areas. They needed quantitative proof of customer willingness-to-pay and brand awareness.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">2. My Individual Role</h3>
+          <p>Lead Student Researcher. Formulated the survey instrument, managed survey distribution across 1,250 respondents, performed data hygiene in Excel, and ran cross-tabulations in SPSS.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">3. Research Methods &amp; Tools Used</h3>
+          <p class="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs text-slate-700">
+            Tools: SPSS Statistics, Tableau Desktop, MS Excel PivotTables<br>
+            Methods: Stratified Random Sampling, Chi-Square Independence Tests, Likert-scale Sentiment Analysis
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">4. Main Findings</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>72% of respondents aged 22-38 indicated high interest in eco-certified packaging.</li>
+            <li>Location B demonstrated the lowest price sensitivity, with 64% willing to pay a 15% premium.</li>
+            <li>Digital ad conversion rate assumptions were overestimated by 20% in the client's initial model.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">5. Strategic Recommendations</h3>
+          <p>Recommended prioritizing Location B for immediate store launch, re-allocating 40% of marketing budget toward hyper-targeted Instagram/TikTok micro-influencers, and adjusting product price points to $48.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+        <span class="text-xs text-slate-400">Editable sample case study for BBA portfolio demonstration.</span>
+        <div class="flex gap-2">
+          <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+            Close Modal
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Project 2 -->
+  <div id="modal-project-2" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-p2-title">
+    <div class="bg-white rounded-xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-4">
+        <span class="text-xs font-mono text-slate-400">[Demonstration Case Study - Editable Template]</span>
+        <h2 id="modal-p2-title" class="text-2xl font-bold text-slate-900 mt-1">
+          Corporate DCF Valuation &amp; M&amp;A Sensitivity Analysis
+        </h2>
+        <span class="inline-block mt-2 px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded">Finance &amp; Valuation</span>
+      </div>
+
+      <div class="h-48 bg-slate-100 rounded-lg overflow-hidden mb-6 border border-slate-200">
+        <img src="assets/images/project-financial-analysis.svg" alt="Project 2 Valuation Preview" class="w-full h-full object-cover">
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">1. Business Problem &amp; Objective</h3>
+          <p>During an M&amp;A capstone simulation, our student analyst team evaluated whether a private equity client should bid on a mid-sized consumer electronics retail chain valued by sellers at $50M.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">2. My Individual Role</h3>
+          <p>Financial Analyst. Responsible for modeling 5-year free cash flow projections, estimating cost of equity via CAPM, calculating weighted average cost of capital (WACC), and building dynamic sensitivity tables in Excel.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">3. Research Methods &amp; Tools Used</h3>
+          <p class="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs text-slate-700">
+            Tools: MS Excel Financial Modeling (Data Tables, Goal Seek), Capital IQ Data<br>
+            Methods: Discounted Cash Flow (DCF), Comparable Company Analysis (Comps), Precedent Transactions
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">4. Main Findings</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Calculated WACC of 8.75% based on 60% equity / 40% debt capital structure.</li>
+            <li>Implied enterprise fair value came out to $42.8M ($14.20/share), showing the seller's price was overvalued by ~16%.</li>
+            <li>Sensitivity analysis demonstrated that a 0.5% increase in terminal growth rate added $3.2M to overall enterprise value.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">5. Strategic Recommendations</h3>
+          <p>Advised the client to submit an initial bid range of $40.0M – $42.5M, leveraging peer EV/EBITDA multiples (11.2x vs. industry median 13.5x) during price negotiations.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+        <span class="text-xs text-slate-400">Editable sample case study for BBA portfolio demonstration.</span>
+        <div class="flex gap-2">
+          <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+            Close Modal
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Project 3 -->
+  <div id="modal-project-3" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-p3-title">
+    <div class="bg-white rounded-xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-4">
+        <span class="text-xs font-mono text-slate-400">[Demonstration Case Study - Editable Template]</span>
+        <h2 id="modal-p3-title" class="text-2xl font-bold text-slate-900 mt-1">
+          SME Supply Chain Automation Strategy
+        </h2>
+        <span class="inline-block mt-2 px-2.5 py-0.5 bg-purple-100 text-purple-800 text-xs font-semibold rounded">Business Analysis</span>
+      </div>
+
+      <div class="h-48 bg-slate-100 rounded-lg overflow-hidden mb-6 border border-slate-200">
+        <img src="assets/images/project-digital-strategy.svg" alt="Project 3 Workflow Preview" class="w-full h-full object-cover">
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">1. Business Problem &amp; Objective</h3>
+          <p>A regional distribution SME suffered a 18% order discrepancy rate due to manual paper-based inventory tracking and fragmented order entry systems.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">2. My Individual Role</h3>
+          <p>Business Process Analyst. Documented current warehouse operations through employee interviews, created BPMN process flowcharts, and built a Total Cost of Ownership (TCO) model for 3 vendor software solutions.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">3. Research Methods &amp; Tools Used</h3>
+          <p class="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs text-slate-700">
+            Tools: BPMN 2.0 Process Mapping, MS Visio/Lucidchart, Weighted Decision Matrix<br>
+            Methods: Stakeholder Interviewing, Bottleneck Analysis, Payback Period Calculation
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">4. Main Findings</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Manual re-entry of order forms consumed 14 hours per week per warehouse manager.</li>
+            <li>Stockout incidents caused an estimated $85,000 in lost annual revenue.</li>
+            <li>Cloud-based barcode scanning software could reduce fulfillment errors from 18% to under 2%.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">5. Strategic Recommendations</h3>
+          <p>Recommended implementing a lightweight cloud ERP with mobile barcode integration, yielding a projected 22% increase in throughput and a 14-month ROI payback period.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+        <span class="text-xs text-slate-400">Editable sample case study for BBA portfolio demonstration.</span>
+        <div class="flex gap-2">
+          <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+            Close Modal
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Project 4 -->
+  <div id="modal-project-4" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-p4-title">
+    <div class="bg-white rounded-xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-4">
+        <span class="text-xs font-mono text-slate-400">[Demonstration Case Study - Editable Template]</span>
+        <h2 id="modal-p4-title" class="text-2xl font-bold text-slate-900 mt-1">
+          Go-To-Market &amp; Commercialization Plan for SaaS Startup
+        </h2>
+        <span class="inline-block mt-2 px-2.5 py-0.5 bg-amber-100 text-amber-800 text-xs font-semibold rounded">Entrepreneurship &amp; Strategy</span>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">1. Business Problem &amp; Objective</h3>
+          <p>Formulated a go-to-market strategy for an early-stage SaaS invoice processing software, targeting SMB accounting firms across North America.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">2. My Individual Role</h3>
+          <p>Strategy Lead. Developed tier pricing structures, modeled Customer Acquisition Cost (CAC) vs. Customer Lifetime Value (LTV), and presented pitch deck to faculty panel.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">3. Research Methods &amp; Tools Used</h3>
+          <p class="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs text-slate-700">
+            Tools: MS PowerPoint, Excel Financial Projections, TAM/SAM/SOM Modeling<br>
+            Methods: Value-Based Pricing Analysis, Unit Economics Evaluation
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">4. Main Findings</h3>
+          <p>Identified a $120M Serviceable Obtainable Market (SOM). Recommended a freemium acquisition hook converting into a $99/month tier, yielding a projected 4.2x LTV:CAC ratio over 3 years.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+        <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Project 5 -->
+  <div id="modal-project-5" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-p5-title">
+    <div class="bg-white rounded-xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-4">
+        <span class="text-xs font-mono text-slate-400">[Demonstration Case Study - Editable Template]</span>
+        <h2 id="modal-p5-title" class="text-2xl font-bold text-slate-900 mt-1">
+          Macroeconomic Interest Rate Impact Analysis
+        </h2>
+        <span class="inline-block mt-2 px-2.5 py-0.5 bg-slate-200 text-slate-800 text-xs font-semibold rounded">Academic Research</span>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">1. Business Problem &amp; Objective</h3>
+          <p>Investigated historical correlations between central bank interest rate changes and commercial real estate REIT valuation yields across 10-year historical cycles.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">2. My Individual Role</h3>
+          <p>Solo Student Researcher. Extracted FRED macroeconomic time-series data, cleansed data in R/Python, and authored a 15-page academic research report.</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 text-base mb-1">3. Tools Used</h3>
+          <p class="bg-slate-50 p-3 rounded border border-slate-200 font-mono text-xs text-slate-700">
+            Tools: FRED Data API, Python (Pandas, Statsmodels), MS Word Academic Formatting
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+        <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SHARED FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-sky-600 text-white font-bold flex items-center justify-center text-sm">AM</span>
+            <span class="font-bold text-white text-lg">Alex Morgan</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            BBA Candidate specializing in Business Analytics &amp; Strategic Management. Passionate about turning complex data into actionable business insight.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Quick Links</h4>
+          <ul class="space-y-1.5 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Me</a></li>
+            <li><a href="projects.html" class="hover:text-white transition-colors">Projects &amp; Case Studies</a></li>
+            <li><a href="resume.html" class="hover:text-white transition-colors">Resume</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Connect</h4>
+          <p class="text-sm">
+            Email: <a href="mailto:alex.morgan.bba@example.com" class="text-sky-400 hover:underline">alex.morgan.bba@example.com</a>
+          </p>
+          <p class="text-sm">
+            LinkedIn: <a href="https://linkedin.com/in/example-alex-morgan" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">linkedin.com/in/example-alex-morgan</a>
+          </p>
+          <p class="text-sm">
+            Location: Metropolitan Area, United States
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="year">2025</span> Alex Morgan. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Customizable BBA Student Portfolio Website</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

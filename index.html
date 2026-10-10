@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Alex Morgan - BBA Final-Year Student specializing in Business Analytics & Strategic Management. Open to internship and graduate analyst roles.">
+  <title>Alex Morgan | BBA Student & Business Analyst Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-sky-900 min-h-screen flex flex-col">
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Brand / Wordmark -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="w-10 h-10 rounded-lg bg-slate-900 text-white font-bold flex items-center justify-center text-lg shadow-sm group-hover:bg-sky-700 transition-colors">
+            AM
+          </span>
+          <div>
+            <!-- EDITABLE: Student Name -->
+            <span class="block font-bold text-slate-900 text-lg leading-tight group-hover:text-sky-700 transition-colors">Alex Morgan</span>
+            <span class="block text-xs text-slate-500 font-medium">BBA Candidate 2025</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Home</a>
+          <a href="about.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">About</a>
+          <a href="projects.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Projects</a>
+          <a href="resume.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Resume</a>
+          <a href="contact.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Contact</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="about.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
+      <a href="projects.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Projects</a>
+      <a href="resume.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Resume</a>
+      <a href="contact.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Contact</a>
+      <div class="pt-2">
+        <a href="assets/resume.pdf" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-colors">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="py-16 md:py-24 bg-white border-b border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <!-- Hero Text Content -->
+          <div class="lg:col-span-7 space-y-6">
+
+            <!-- Availability Badge (Editable) -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Open to Internship &amp; Full-Time Graduate Roles
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              <!-- EDITABLE: Student Headline -->
+              BBA Final-Year Student | Aspiring Business Analyst | Market Research Enthusiast
+            </h1>
+
+            <!-- Subtitle / Bio Intro -->
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+              <!-- EDITABLE: Student Intro -->
+              I bridge analytical rigor with strategic business decision-making. Senior Business Administration student at <strong>State University School of Business</strong> with a proven focus on financial modeling, consumer research, and process optimization.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="projects.html" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-900 text-white font-semibold text-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 transition-all shadow-sm">
+                View My Case Studies
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-100 text-slate-800 font-semibold text-sm hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 transition-all">
+                Download Resume (PDF)
+              </a>
+            </div>
+
+            <!-- Quick Metrics / Highlights -->
+            <div class="pt-6 border-t border-slate-100 grid grid-cols-3 gap-4 max-w-lg">
+              <div>
+                <span class="block text-2xl font-bold text-slate-900">3.85</span>
+                <span class="block text-xs text-slate-500">Major GPA</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-bold text-slate-900">3+</span>
+                <span class="block text-xs text-slate-500">Applied Case Studies</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-bold text-slate-900">May 2025</span>
+                <span class="block text-xs text-slate-500">Expected Graduation</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Image / Profile Photo -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-lg">
+              <!-- EDITABLE: Profile Photo image path -->
+              <img src="assets/images/profile-placeholder.svg" alt="Alex Morgan - BBA Final-Year Student" class="w-full h-full object-cover">
+              <div class="absolute inset-0 ring-1 ring-inset ring-slate-900/10 rounded-2xl"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROFESSIONAL INTRODUCTION
+         ========================================== -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center space-y-4">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">About My Approach</h2>
+          <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Combining Business Acumen with Data-Driven Decision Making</h3>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Throughout my BBA studies, I have focused on understanding how businesses scale sustainably through quantitative research, valuation models, and strategy frameworks. My academic projects mirror real-world consulting problems—ranging from retail market entry studies to supply chain digital transformation roadmaps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED PROJECTS SECTION
+         ========================================== -->
+    <section class="py-16 md:py-20 bg-white border-y border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">Practical Work</h2>
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Featured Case Studies</h3>
+          </div>
+          <a href="projects.html" class="mt-4 sm:mt-0 text-sm font-semibold text-sky-700 hover:text-sky-900 inline-flex items-center">
+            View All Projects &rarr;
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Project Card 1 -->
+          <article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-market-research.svg" alt="Market Feasibility Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Market Research
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  Retail Market Feasibility &amp; Consumer Survey Analysis
+                </h4>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Analyzed consumer survey response data across 1,250 regional shoppers to evaluate product-market fit for an eco-friendly retail brand expansion.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">SPSS</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Tableau</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Survey Design</span>
+                </div>
+                <button data-modal-target="modal-project-1" class="w-full py-2 px-3 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-financial-analysis.svg" alt="Financial Modeling Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Finance &amp; Valuation
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  Corporate DCF Valuation &amp; Sensitivity Analysis
+                </h4>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Built a 5-year Discounted Cash Flow (DCF) model and sensitivity matrix for a mid-market consumer electronics firm during a simulated M&amp;A module.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">Excel Valuation</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">DCF Model</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">WACC Analysis</span>
+                </div>
+                <button data-modal-target="modal-project-2" class="w-full py-2 px-3 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+            <div class="h-48 bg-slate-800 relative overflow-hidden">
+              <img src="assets/images/project-digital-strategy.svg" alt="Digital Transformation Preview" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/80 text-white text-xs px-2.5 py-1 rounded font-medium backdrop-blur-sm">
+                Business Analysis
+              </span>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="text-lg font-bold text-slate-900 mb-2 hover:text-sky-700 transition-colors">
+                  SME Supply Chain Automation Strategy
+                </h4>
+                <p class="text-slate-600 text-sm line-clamp-3 mb-4">
+                  Designed process workflow maps and evaluated cloud ERP software suites to modernize inventory tracking for a regional manufacturing business.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">BPMN Mapping</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">ROI Modeling</span>
+                  <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-medium">ERP Vendor Matrix</span>
+                </div>
+                <button data-modal-target="modal-project-3" class="w-full py-2 px-3 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded text-center transition-colors">
+                  View Full Case Study
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SKILLS OVERVIEW SECTION
+         ========================================== -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">Capabilities</h2>
+          <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Skills &amp; Toolkit</h3>
+          <p class="text-slate-600 text-sm mt-2">A balanced blend of analytical, technical, and managerial skills developed through BBA coursework and capstone projects.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Skill Category 1 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center font-bold mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-3">Business &amp; Strategy</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Financial Modeling &amp; Valuation (DCF)</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Market Opportunity Analysis</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Business Process Mapping (BPMN)</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Consumer Survey Design &amp; Sampling</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Competitive Positioning Frameworks</li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center font-bold mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-3">Technical &amp; Software</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Advanced MS Excel (PivotTables, VBA, VLOOKUP)</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Tableau &amp; Power BI Dashboarding</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> SPSS Statistical Package</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> SQL Basics &amp; Relational Data Queries</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> MS PowerPoint &amp; Executive Deck Design</li>
+            </ul>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center font-bold mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-3">Communication &amp; Leadership</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Executive Presentation &amp; Pitching</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Cross-Functional Team Collaboration</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Business Writing &amp; Formal Reporting</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Case Competition Team Lead</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-sky-600 rounded-full"></span> Stakeholder Requirement Gathering</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EDUCATION SNAPSHOT SECTION
+         ========================================== -->
+    <section class="py-16 bg-white border-t border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="bg-slate-900 rounded-2xl p-8 md:p-12 text-white shadow-xl">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+            <div class="md:col-span-8 space-y-3">
+              <span class="inline-block text-xs font-semibold uppercase tracking-widest text-sky-400">Academic Background</span>
+              <h3 class="text-2xl sm:text-3xl font-bold">Bachelor of Business Administration (BBA)</h3>
+              <!-- EDITABLE: University details -->
+              <p class="text-slate-300 font-medium text-base">
+                State University School of Business &bull; Major in Business Analytics &amp; Strategic Management
+              </p>
+              <p class="text-slate-400 text-sm max-w-2xl leading-relaxed">
+                Relevant coursework includes Advanced Financial Management, Business Intelligence &amp; Analytics, Strategic Marketing, Operations Research, and Managerial Accounting.
+              </p>
+            </div>
+
+            <div class="md:col-span-4 flex flex-col md:items-end justify-center border-t md:border-t-0 md:border-l border-slate-800 pt-6 md:pt-0 md:pl-8 space-y-2">
+              <div>
+                <span class="block text-xs text-slate-400">Expected Graduation</span>
+                <span class="block text-xl font-bold text-white">May 2025</span>
+              </div>
+              <div>
+                <span class="block text-xs text-slate-400">Academic Honors</span>
+                <span class="block text-sm font-semibold text-sky-300">Dean's Honor List (4 Semesters)</span>
+              </div>
+              <div class="pt-2">
+                <a href="about.html" class="inline-flex items-center text-xs font-semibold text-sky-400 hover:text-sky-300">
+                  Read Full Academic Profile &rarr;
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT CTA SECTION
+         ========================================== -->
+    <section class="py-16 md:py-20 bg-slate-50 border-t border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">Let's Discuss Opportunities</h2>
+        <p class="text-slate-600 max-w-xl mx-auto text-base mb-8">
+          I am actively seeking internship, graduate analyst, or junior business consulting roles starting mid-2025. Feel free to review my full profile or reach out directly.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="contact.html" class="px-6 py-3 rounded-lg bg-slate-900 text-white font-semibold text-sm hover:bg-sky-700 transition-colors shadow-sm">
+            Get in Touch
+          </a>
+          <a href="resume.html" class="px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-800 font-semibold text-sm hover:bg-slate-50 transition-colors">
+            View Online Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       MODALS FOR FEATURED CASE STUDIES
+       ========================================== -->
+
+  <!-- Modal Project 1 -->
+  <div id="modal-project-1" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+    <div class="bg-white rounded-xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Market Research Case Study</span>
+      <h3 id="modal-1-title" class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 mb-4">
+        Retail Market Feasibility &amp; Consumer Survey Analysis
+      </h3>
+
+      <div class="space-y-4 text-sm text-slate-600 border-t border-slate-100 pt-4">
+        <div>
+          <h4 class="font-bold text-slate-900">Business Objective:</h4>
+          <p>Determine market demand and pricing sensitivity for expanding an eco-friendly consumer goods brand into three secondary metropolitan markets.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">My Individual Role:</h4>
+          <p>Designed survey questionnaire, sampled 1,250 respondents, cleansed raw datasets using Excel, and performed cross-tabulation and regression analysis in SPSS.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">Key Tools &amp; Methods:</h4>
+          <p class="font-mono text-xs text-slate-700 bg-slate-100 p-2 rounded">SPSS, Tableau, Excel PivotTables, Likert Scale Survey Design, Chi-Square Testing</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">Main Recommendations:</h4>
+          <p>Recommended prioritizing Location B based on higher price tolerance ($45-$60 band) and a 34% higher purchase intent index among young professionals.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end gap-3">
+        <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+          Close
+        </button>
+        <a href="projects.html" class="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-semibold hover:bg-sky-700">
+          View Detailed Case Studies Page
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Project 2 -->
+  <div id="modal-project-2" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+    <div class="bg-white rounded-xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Finance Case Study</span>
+      <h3 id="modal-2-title" class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 mb-4">
+        Corporate DCF Valuation &amp; Sensitivity Analysis
+      </h3>
+
+      <div class="space-y-4 text-sm text-slate-600 border-t border-slate-100 pt-4">
+        <div>
+          <h4 class="font-bold text-slate-900">Business Objective:</h4>
+          <p>Evaluate fair enterprise value for a regional consumer electronics retailer to support buy-side acquisition deliberations in an advanced corporate finance capstone.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">My Individual Role:</h4>
+          <p>Calculated weighted average cost of capital (WACC = 8.75%), projected 5-year free cash flows, and constructed dynamic Excel sensitivity matrices for terminal growth rates.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">Key Tools &amp; Methods:</h4>
+          <p class="font-mono text-xs text-slate-700 bg-slate-100 p-2 rounded">Financial Modeling, DCF Valuation, WACC Calculation, Multiples Analysis (EV/EBITDA, P/E)</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">Main Recommendations:</h4>
+          <p>Determined enterprise valuation of $42.8M ($14.20/share), indicating the target firm was undervalued by 12% relative to current market trading price.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end gap-3">
+        <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+          Close
+        </button>
+        <a href="projects.html" class="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-semibold hover:bg-sky-700">
+          View Detailed Case Studies Page
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Project 3 -->
+  <div id="modal-project-3" class="modal-backdrop fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+    <div class="bg-white rounded-xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+      <button data-modal-close class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Business Analysis Case Study</span>
+      <h3 id="modal-3-title" class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 mb-4">
+        SME Supply Chain Automation Strategy
+      </h3>
+
+      <div class="space-y-4 text-sm text-slate-600 border-t border-slate-100 pt-4">
+        <div>
+          <h4 class="font-bold text-slate-900">Business Objective:</h4>
+          <p>Address inventory stockout issues and order delays for a wholesale distribution client through process re-engineering and cloud software evaluation.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">My Individual Role:</h4>
+          <p>Interviewed 8 warehouse operations personnel, mapped current vs. future-state BPMN workflows, and constructed a weighted vendor scorecard for ERP software.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">Key Tools &amp; Methods:</h4>
+          <p class="font-mono text-xs text-slate-700 bg-slate-100 p-2 rounded">BPMN 2.0 Mapping, TCO &amp; ROI Modeling, Vendor Evaluation Matrix, Gap Analysis</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900">Main Recommendations:</h4>
+          <p>Proposed adopting mid-market Cloud ERP with integrated barcode scanning, projecting a 22% reduction in order processing cycle time and 14-month ROI payback.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end gap-3">
+        <button data-modal-close class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold hover:bg-slate-200">
+          Close
+        </button>
+        <a href="projects.html" class="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-semibold hover:bg-sky-700">
+          View Detailed Case Studies Page
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SHARED FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+
+        <!-- Footer Column 1: Info -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-sky-600 text-white font-bold flex items-center justify-center text-sm">AM</span>
+            <span class="font-bold text-white text-lg">Alex Morgan</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            BBA Candidate specializing in Business Analytics &amp; Strategic Management. Passionate about turning complex data into actionable business insight.
+          </p>
+        </div>
+
+        <!-- Footer Column 2: Nav Links -->
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Quick Links</h4>
+          <ul class="space-y-1.5 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Me</a></li>
+            <li><a href="projects.html" class="hover:text-white transition-colors">Projects &amp; Case Studies</a></li>
+            <li><a href="resume.html" class="hover:text-white transition-colors">Resume</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Contact Info -->
+        <div class="md:col-span-4 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Connect</h4>
+          <p class="text-sm">
+            Email: <a href="mailto:alex.morgan.bba@example.com" class="text-sky-400 hover:underline">alex.morgan.bba@example.com</a>
+          </p>
+          <p class="text-sm">
+            LinkedIn: <a href="https://linkedin.com/in/example-alex-morgan" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">linkedin.com/in/example-alex-morgan</a>
+          </p>
+          <p class="text-sm">
+            Location: Metropolitan Area, United States
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="year">2025</span> Alex Morgan. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Customizable BBA Student Portfolio Website</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

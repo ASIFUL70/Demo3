@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Alex Morgan - BBA Final-Year Student specializing in Business Analytics, academic background, career goals, leadership, and certifications.">
+  <title>About Me | Alex Morgan - BBA Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-100 selection:text-sky-900 min-h-screen flex flex-col">
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Brand / Wordmark -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <span class="w-10 h-10 rounded-lg bg-slate-900 text-white font-bold flex items-center justify-center text-lg shadow-sm group-hover:bg-sky-700 transition-colors">
+            AM
+          </span>
+          <div>
+            <span class="block font-bold text-slate-900 text-lg leading-tight group-hover:text-sky-700 transition-colors">Alex Morgan</span>
+            <span class="block text-xs text-slate-500 font-medium">BBA Candidate 2025</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Home</a>
+          <a href="about.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">About</a>
+          <a href="projects.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Projects</a>
+          <a href="resume.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Resume</a>
+          <a href="contact.html" class="nav-link text-slate-600 hover:text-slate-900 transition-colors py-1">Contact</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-all shadow-sm">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Home</a>
+      <a href="about.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
+      <a href="projects.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Projects</a>
+      <a href="resume.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Resume</a>
+      <a href="contact.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Contact</a>
+      <div class="pt-2">
+        <a href="assets/resume.pdf" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-sky-700 transition-colors">
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ==========================================
+         PAGE HEADER
+         ========================================== -->
+    <section class="py-12 md:py-16 bg-white border-b border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-700">Personal &amp; Professional Background</span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1 mb-4">About Me</h1>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            I am a senior BBA student with a passion for transforming data into strategic recommendations. Here is an overview of my academic journey, core competencies, and career objectives.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BIOGRAPHY & CAREER INTERESTS
+         ========================================== -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          <!-- Bio Column -->
+          <div class="lg:col-span-7 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+            <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-4">Professional Biography</h2>
+
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              As a final-year Bachelor of Business Administration (BBA) candidate at State University School of Business, my academic focus combines quantitative analytics with high-level corporate strategy. Over the course of my degree, I have gravitated toward solving complex operational and market problems through empirical research and structured frameworks.
+            </p>
+
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              In addition to coursework, I have actively participated in national business case competitions, held leadership positions in student organizations, and conducted hands-on research consulting for local small businesses. I thrive in team environments that value rigorous analysis, constructive debate, and actionable execution.
+            </p>
+
+            <div class="pt-4 border-t border-slate-100">
+              <h3 class="font-bold text-slate-900 mb-2">Target Career Direction</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                I am preparing to launch my career in <strong>Management Consulting</strong>, <strong>Business Analytics</strong>, or <strong>Corporate Strategy</strong>. I am eager to apply my data modeling, financial valuation, and process optimization skills to support growth-focused enterprise teams.
+              </p>
+            </div>
+          </div>
+
+          <!-- Profile Snapshot Sidebar -->
+          <div class="lg:col-span-5 space-y-6">
+
+            <!-- Quick Profile Box -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+              <div class="flex items-center gap-4">
+                <img src="assets/images/profile-placeholder.svg" alt="Alex Morgan Profile" class="w-16 h-16 rounded-xl object-cover border border-slate-200">
+                <div>
+                  <h3 class="font-bold text-slate-900">Alex Morgan</h3>
+                  <p class="text-xs text-slate-500">BBA Senior (Graduating May 2025)</p>
+                  <p class="text-xs text-sky-700 font-medium">State University School of Business</p>
+                </div>
+              </div>
+
+              <div class="border-t border-slate-100 pt-4 space-y-2 text-xs text-slate-600">
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Specialization:</span>
+                  <span class="font-semibold text-slate-800">Business Analytics &amp; Strategy</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Cumulative GPA:</span>
+                  <span class="font-semibold text-slate-800">3.82 / 4.00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Location:</span>
+                  <span class="font-semibold text-slate-800">United States</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-slate-400">Work Authorization:</span>
+                  <span class="font-semibold text-slate-800">Authorized (No Sponsorship Required)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Strengths -->
+            <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-sm space-y-3">
+              <h3 class="font-bold text-base text-white">Core Academic Highlights</h3>
+              <ul class="space-y-2 text-xs text-slate-300">
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sky-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span>Dean's Honor List across 4 consecutive semesters.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sky-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span>1st Place Winner, Inter-University Business Case Challenge (2024).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-sky-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  <span>Senior Capstone Project Leader managing 4 student analysts.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EDUCATION TIMELINE & COURSEWORK
+         ========================================== -->
+    <section class="py-16 bg-white border-y border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+          <!-- Timeline Column -->
+          <div class="lg:col-span-6 space-y-6">
+            <div>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">Timeline</h2>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">Education &amp; Experience</h3>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 pl-6 ml-2 space-y-8">
+
+              <!-- Timeline Item 1 -->
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-sky-600 ring-4 ring-white"></span>
+                <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-full">2021 – May 2025 (Expected)</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2">Bachelor of Business Administration (BBA)</h4>
+                <p class="text-sm font-medium text-slate-700">State University School of Business</p>
+                <p class="text-xs text-slate-500 mt-1">Specialization in Business Analytics &amp; Strategic Management | Major GPA: 3.85</p>
+              </div>
+
+              <!-- Timeline Item 2 -->
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></span>
+                <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">Summer 2024</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2">Business Analyst Intern</h4>
+                <p class="text-sm font-medium text-slate-700">Apex Regional Logistics</p>
+                <p class="text-xs text-slate-500 mt-1">Assisted senior consultants in optimizing warehouse layout efficiency and creating Tableau performance dashboards.</p>
+              </div>
+
+              <!-- Timeline Item 3 -->
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></span>
+                <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">2023 – Present</span>
+                <h4 class="text-lg font-bold text-slate-900 mt-2">Student Research Assistant</h4>
+                <p class="text-sm font-medium text-slate-700">Department of Management &amp; Analytics</p>
+                <p class="text-xs text-slate-500 mt-1">Cleaned and structured quantitative survey datasets for faculty research on post-pandemic retail buying behavior.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Coursework Grid Column -->
+          <div class="lg:col-span-6 space-y-6">
+            <div>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">Academic Foundations</h2>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">Relevant BBA Coursework</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 text-sm">Business Analytics &amp; Mining</h4>
+                <p class="text-xs text-slate-600 mt-1">Data cleansing, predictive modeling in SPSS, Excel decision trees, and SQL querying.</p>
+              </div>
+
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 text-sm">Corporate Finance &amp; Valuation</h4>
+                <p class="text-xs text-slate-600 mt-1">Discounted cash flow (DCF), cost of capital (WACC), capital budgeting, and ratio analysis.</p>
+              </div>
+
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 text-sm">Strategic Management</h4>
+                <p class="text-xs text-slate-600 mt-1">SWOT, PESTEL, Porter's Five Forces, industry structure analysis, and M&amp;A case analysis.</p>
+              </div>
+
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                <h4 class="font-bold text-slate-900 text-sm">Operations &amp; Supply Chain</h4>
+                <p class="text-xs text-slate-600 mt-1">Process flow mapping, inventory control models, bottleneck identification, and quality metrics.</p>
+              </div>
+
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 sm:col-span-2">
+                <h4 class="font-bold text-slate-900 text-sm">Marketing Research &amp; Consumer Insight</h4>
+                <p class="text-xs text-slate-600 mt-1">Qualitative focus group moderation, quantitative survey instrument design, regression analysis, and persona mapping.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EXTRACURRICULAR, LEADERSHIP & CERTIFICATIONS
+         ========================================== -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+          <!-- Leadership & Extracurriculars -->
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">Campus Involvement</h2>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">Leadership &amp; Activities</h3>
+            </div>
+
+            <div class="space-y-4">
+
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base">President &bull; Future Business Leaders Association</h4>
+                    <p class="text-xs text-sky-700 font-medium">State University Student Chapter</p>
+                  </div>
+                  <span class="text-xs text-slate-500 font-mono">2023 – 2025</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                  Led an executive committee of 6 student leaders to organize 12 guest speaker workshops, 2 regional networking panels, and annual case competition preparation sessions for 120+ student members.
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base">Peer Tutor &bull; Business Statistics &amp; Finance</h4>
+                    <p class="text-xs text-sky-700 font-medium">University Academic Success Center</p>
+                  </div>
+                  <span class="text-xs text-slate-500 font-mono">2022 – 2024</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                  Provided weekly 1-on-1 tutoring in quantitative business statistics and Excel financial modeling for 30+ undergraduate business students.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Certifications & Achievements -->
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-sky-700">Recognitions</h2>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">Certifications &amp; Awards</h3>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+
+              <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                <div class="w-8 h-8 rounded bg-sky-50 text-sky-700 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Google Data Analytics Professional Certificate</h4>
+                  <p class="text-xs text-slate-500">Coursera / Google Credential (2024)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 pb-3 border-b border-slate-100">
+                <div class="w-8 h-8 rounded bg-sky-50 text-sky-700 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Bloomberg Market Concepts (BMC) Certification</h4>
+                  <p class="text-xs text-slate-500">Bloomberg LP (2023)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-sky-50 text-sky-700 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Dean's Honor List Recognition</h4>
+                  <p class="text-xs text-slate-500">State University (Fall 2021, Spring 2022, Fall 2023, Spring 2024)</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SHARED FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-sky-600 text-white font-bold flex items-center justify-center text-sm">AM</span>
+            <span class="font-bold text-white text-lg">Alex Morgan</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            BBA Candidate specializing in Business Analytics &amp; Strategic Management. Passionate about turning complex data into actionable business insight.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Quick Links</h4>
+          <ul class="space-y-1.5 text-sm">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Me</a></li>
+            <li><a href="projects.html" class="hover:text-white transition-colors">Projects &amp; Case Studies</a></li>
+            <li><a href="resume.html" class="hover:text-white transition-colors">Resume</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Connect</h4>
+          <p class="text-sm">
+            Email: <a href="mailto:alex.morgan.bba@example.com" class="text-sky-400 hover:underline">alex.morgan.bba@example.com</a>
+          </p>
+          <p class="text-sm">
+            LinkedIn: <a href="https://linkedin.com/in/example-alex-morgan" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">linkedin.com/in/example-alex-morgan</a>
+          </p>
+          <p class="text-sm">
+            Location: Metropolitan Area, United States
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="year">2025</span> Alex Morgan. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Customizable BBA Student Portfolio Website</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
